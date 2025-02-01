@@ -1,0 +1,233 @@
+/* Font Imports */
+@font-face {
+    font-family: 'Photograph Signature';
+    src: url(assets/fonts/photograph_signature-webfont.woff2) format('woff2'),
+         url(assets/fonts/photograph_signature-webfont.woff) format('woff');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Futura", sans-serif;
+    src: url(assets/fonts/futura-condensedlight-webfont.woff2) format('woff2'),
+         url(assets/fonts/futura-condensedlight-webfont.woff) format('woff');
+    font-style: normal;
+    font-weight: 300;
+}
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Main Font Styling */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 70px;
+}
+.page-container{
+    width: 1280px;
+}
+.main h2 {
+    background: linear-gradient(180deg, #33E28C 19%, #4F94D9 82%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-weight: 350;
+    font-size: 62px;
+    line-height: 115%;
+ 
+    margin: 5px 0px 17px 0px;
+}
+
+.main h3 {
+    font-weight: 500;
+    color:#a5a8a4;
+    font-size: 50px;
+}
+
+.main h4 {
+    font-weight: 500;
+    color:#4E544D;
+    font-size: 56px;
+}
+
+.main h7 {
+    font-weight: 900;
+    color:#4E544D;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.main p {
+    color:#4E544D;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.price {
+    font-size: 34px;
+    font-weight: 500;
+    color: #71c9ff;
+}
+
+/* Room Header Styling */
+.room-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+    max-width: 770px;
+    margin-top: 70px;
+    width: 100%;
+}
+
+.room-subheader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+    max-width: 100%;
+    margin-top: 30px;
+}
+
+/* Carousel Container */
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Carousel Styling */
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 540px;
+    width: 100%;
+    height: 410px;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+/* ROOM BOOK BUTTON */
+/* Room Book One */
+.room-book-one {
+    text-decoration: none;
+    color: #4E544D;
+    border: 1px solid #4E544D;
+    padding: 8px 40px;
+    margin: 22px 60px 20px 0px;
+    width: 193px;
+    position: relative; /* Added for pseudo-element positioning */
+    transition: 0.3s;
+}
+
+/* Hover Effect for Book Button */
+.room-book-one:hover {
+    color: #4E544D;
+}
+
+/* Pseudo-element for Book Button */
+.room-book-one:before {
+    content: ""; /* Creates an empty pseudo-element (no text) */
+    position: absolute; /* Position it absolutely inside the button */
+    top: 0; /* Position it at the top edge of the button */
+    left: 0; /* Position it at the left edge of the button */
+    width: 0%; /* Initially, the pseudo-element has no width, so it's invisible */
+    height: 100%; /* The pseudo-element will cover the full height of the button */
+    background: #71c9ff; /* The initial background color of the pseudo-element */
+    transition: width 0.5s ease, background 0.5s ease; /* Smooth transition for width change and background color change */
+    z-index: -1; /* Ensures the pseudo-element stays behind the text (so text is visible) */
+}
+
+/* Hover Effect for the Book Button's Pseudo-element */
+.room-book-one:hover:before {
+    width: 100%; /* On hover, expand the pseudo-element to cover the full width of the button */
+    background: #f8f8f8; /* Change the background color to match the text */
+}
+
+/* Room Book Two */
+.room-book-two {
+    text-decoration: none;
+    color: #4E544D;
+    border: 1px solid #4E544D;
+    padding: 8px 40px;
+    margin: 22px 0px 20px 275px;
+    width: 193px;
+    position: relative; /* Added for pseudo-element positioning */
+    transition: 0.3s;
+}
+
+/* Hover Effect for Book Button */
+.room-book-two:hover {
+    color: #4E544D;
+}
+
+/* Pseudo-element for Book Button */
+.room-book-two:before {
+    content: ""; /* Creates an empty pseudo-element (no text) */
+    position: absolute; /* Position it absolutely inside the button */
+    top: 0; /* Position it at the top edge of the button */
+    left: 0; /* Position it at the left edge of the button */
+    width: 0%; /* Initially, the pseudo-element has no width, so it's invisible */
+    height: 100%; /* The pseudo-element will cover the full height of the button */
+    background: #71c9ff; /* The initial background color of the pseudo-element */
+    transition: width 0.5s ease, background 0.5s ease; /* Smooth transition for width change and background color change */
+    z-index: -1; /* Ensures the pseudo-element stays behind the text (so text is visible) */
+}
+
+/* Hover Effect for the Book Button's Pseudo-element */
+.room-book-two:hover:before {
+    width: 100%; /* On hover, expand the pseudo-element to cover the full width of the button */
+    background: #f8f8f8; /* Change the background color to match the text */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Side Nav */
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 16px;
+    }
+
+    /* Footer Styling */
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .flex-layout-one,
+    .flex-layout-two  {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 40px;
+        text-align: left;
+    }
+
+    .room-book-one,
+    .room-book-two {
+        margin: 15px 0;
+    }
+  }

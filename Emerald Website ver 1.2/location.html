@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <title>Emerald Resort | Location</title>
+    <link rel="stylesheet" href="location-style.css"/>
+    <link rel="stylesheet" href="global-styles.css">
+    <link rel="stylesheet" href="header-slider-styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" class="close-button" onclick="closeNav()">&times;</a>
+        <a id="SB-Rooms" href="room.html">Accommodations</a>
+        <a id="SB-Tour" href="tour.html">Tour Package</a>
+        <a id="SB-Pavilion" href="pavillion.html">The Pavilion</a>
+        <a id="SB-Cottage" href="cottage.html">Cottages</a>
+        <a id="SB-Gallery" href="gallery.html">Photo Gallery</a>
+        <a id="SB-About" href="about.html">About Us</a>
+        <a id="SB-Location" href="location.html" style="color: #71c9ff;">Location</a>
+        <a id="SB-Contact" href="#contact">Contact</a>
+        <a id="SB-Home" href="index.html">Home</a>
+    </div>
+
+    <!-- Top Navigation Bar -->
+    <nav id="nav-bar" class="nav-bar">
+        <div class="menu-button" onclick="openNav()">
+            <div class="hamburger-menu">
+                <div></div>
+                <div></div>
+            </div>
+            <p>Menu</p>
+        </div>
+        <a href="#home" class="nav-text">Emerald</a>
+        <a href="#book" class="book-button">Book Now</a>
+    </nav>
+
+    <header id="home">
+        <div class="header-container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/demo-image-1.jpg" alt="Image 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/demo-image-2.jpg" alt="Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/image-1.jpg" alt="Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/image-5.jpg" alt="Image 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/image-3.jpg" alt="Image 2">
+                    </div>
+                </div>
+                <div class="swiper-button swiper-button-next"></div>
+                <div class="swiper-button swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Locate Us Button -->
+    <div class="vertical-tab">
+        <div class="tab-button" onclick="openModal('locationModal')">
+            <img src="assets/images/map-icon.png" alt="Location Icon" class="tab-icon" />
+            <span>Locate Us</span>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="location-modal" id="locationModal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('locationModal')">&times;</span>
+            <div class="text-container">
+                <h2>Discover Us on the Map</h2>
+                <p>
+                    Easily find us, view our location at a glance, and get all the contact details you need to connect
+                    with us.
+                    Whether you're planning a visit or reaching out, we're just a click away.
+                </p>
+                <h3>Connect With Us</h3>
+                <div class="contact-details">
+                    <p><strong>Phone:</strong> +1-234-567-890</p>
+                    <p><strong>Email:</strong> contact@example.com</p>
+                    <p><strong>Address:</strong> 123 Resort Road, Paradise City, USA</p>
+                </div>
+                <button class="book-btn">Book With Us Now</button>
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1632.8596052100531!2d120.4596544941557!3d14.439844808050145!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339619322c6936ef%3A0xb988dd7a7a0e9ff!2sBatae%C3%B1o%20Tours%20and%20Packages!5e1!3m2!1sen!2sph!4v1737264190157!5m2!1sen!2sph"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="inquiry-modal" id="inquiryModal">
+        <div class="inquiry-modal-content">
+            <span class="close-button" onclick="closeModal('inquiryModal')">&times;</span>
+            <div class="form-container">
+                <h2>Make An Inquiry</h2>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="6a9608cd-8068-445e-bab4-774669241e0c">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here"
+                        required></textarea>
+
+                    <div class="priv-policy">
+                        <input type="checkbox" name="agree" id="agree" required onchange="toggleButtonState()">
+                        <label id="agree-text" for="agree">I agree to your <a class="policy">privacy policy</a>, and my
+                            personal data being stored.</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submit-btn" disabled>Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="main-text-container fade-in-one">
+                <h1>Discover Emerald Resort</h1>
+                <h2>Where Fun Adventures and Relaxation Awaits</h2>
+                <p>Located at Porto Circle, Balon Anito, Mariveles, Bataan, Philippines, Emerald Resort is your gateway to paradise. Set against the stunning backdrop of Mariveles' scenic beauty, our resort offers breathtaking views, tranquil surroundings, and a perfect blend of comfort and adventure. Whether you're looking to unwind by the pool, explore nearby attractions, or celebrate life's special moments, Emerald Resort is the ideal destination. Escape the ordinary and experience the extraordinary—just a short journey away!</p>
+            </div>
+            <div class="main-map-container fade-in-two">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1154.6073029152876!2d120.45936708832463!3d14.439612903568905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339619322c6936ef%3A0xb988dd7a7a0e9ff!2sBatae%C3%B1o%20Tours%20and%20Packages!5e1!3m2!1sen!2sph!4v1737554522308!5m2!1sen!2sph" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="footer">
+        <div class="gallery-footer">
+            <div class="gallery-footer-container">
+                <div class="gallery-item">
+                    <img src="assets/images/image-4.jpg" alt="Gallery Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/image-4.jpg" alt="Gallery Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/image-4.jpg" alt="Gallery Image 3">
+                </div>
+            </div>
+        </div>
+        <div id="footer-container" class="footer-container">
+            <!--Links-->
+            <div id="quick-links" class="quick-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="room.html">Accommodation</a></li>
+                    <li><a href="pavillion.html">Pavillion</a></li>
+                    <li><a href="tour.html">Tour</a></li>
+                    <li><a href="cottage.html">Cottages</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#">Back To Top</a></li>
+                </ul>
+            </div>
+            <hr>
+            <!--Contact-->
+            <div id="contact" class="contact">
+                <h3>Contact Us</h3>
+                <p><strong>Phone:</strong> +63 944 302 2611</p>
+                <p><strong>Email:</strong> emeraldresortph@gmail.com</p>
+                <p><strong>Address:</strong> Porto Circle Balon Anito, Mariveles, Bataan, Philippines</p>
+            </div>
+
+            <div class="inquire-footer">
+                <div class="inquire-footer-left">
+                    <h1 id="header-title">Emerald &nbsp;Resort</h1>
+                    <p id="header-subtitle">Fun Adventures and Relaxation Awaits</p>
+                </div>
+                <div class="inquire-footer-right">
+                    <p>Stay in comfort at Emerald Resort, where your perfect getaway begins. Enjoy modern amenities,
+                        exceptional service, and unforgettable experiences. Inquire to learn more!</p>
+                    <a id="footer-button" class="footer-button" onclick="openModal('inquiryModal')">Inquire With Us! <span class="arrow">⟶</span></a>    
+                </div>
+            </div>
+        </div>
+        <!--Copyright-->
+        <div id="copyright" class="copyright">
+            <p>&copy; 2024 Emerald Resort. All Rights Reserved. | Designed by <a href="developers">Developers</a></p>
+        </div>
+    </footer>
+
+    <!--JS-->
+    <script>
+        (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "Ao9O3HKHtJ4opsbGYxhSt"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="slider-scripts.js"></script>
+    <script src="global-scripts.js" defer></script>
+</body>
+</html>
