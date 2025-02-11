@@ -32,7 +32,7 @@
 /* HEADER STYLES */
 .header {
     height: calc(100vh - 40px);
-    margin: 10px;
+    width: 100vw;
     position: relative;
     overflow: hidden;
     color: #f8f8f8;
@@ -73,4 +73,28 @@
     height: 10px;
     transform: scale(1.2) !important; /* Enlarge the active bullet slightly */
     transition: transform 0.3s, background-color 0.3s !important; /* Smooth transition effect */
+}
+
+@media screen and (max-width:425px){
+    .nav-text {
+        font-size: 35px;
+    }
+    .nav-bar.scrolled {
+        .nav-text{
+            font-size: 35px;
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:375px){
+    .nav-text {
+        font-size: 25px;
+    }
+    .nav-bar.scrolled {
+        .nav-text{
+            font-size: 25px;
+            display: none;
+        }
+    }
 }

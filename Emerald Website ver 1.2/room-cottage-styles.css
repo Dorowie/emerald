@@ -22,6 +22,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html,body{
+    overflow-x: hidden;
+}
 
 
 /* Main Font Styling */
@@ -136,6 +139,7 @@
     width: 193px;
     position: relative; /* Added for pseudo-element positioning */
     transition: 0.3s;
+    text-align: center;
 }
 
 /* Hover Effect for Book Button */
@@ -172,6 +176,7 @@
     width: 193px;
     position: relative; /* Added for pseudo-element positioning */
     transition: 0.3s;
+    text-align: center;
 }
 
 /* Hover Effect for Book Button */
@@ -201,33 +206,190 @@
 
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    /* Side Nav */
-    .sidenav {
-        padding-top: 15px;
+@media screen and (max-width: 1440px) {
+    
+    .page-container{
+        width: auto;
     }
-    .sidenav a {
-        font-size: 16px;
+    .main{
+        margin: 0 20px;
     }
-
-    /* Footer Styling */
-    .footer {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
+    .flex-layout-one .content-layout{
+        margin-left: 20px;
     }
-
-    .flex-layout-one,
-    .flex-layout-two  {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        margin-top: 40px;
-        text-align: left;
+    .flex-layout-two .content-layout{
+        margin-right: 20px;
     }
-
-    .room-book-one,
     .room-book-two {
-        margin: 15px 0;
+        margin: 22px 0px 20px 260px;
     }
-  }
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .carousel-wrapper {
+        margin: 0;
+    }
+    .content-layout {
+        max-width: 50% !important;
+    }
+    .room-book-two {
+        margin: 22px 0px 20px 300px;
+    }
+    .flex-layout-one .content-layout{
+        margin-left: 20px;
+    }
+    .flex-layout-two .content-layout{
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flex-layout-one .content-layout{
+        margin-left: 20px;
+    }
+    .flex-layout-two .content-layout{
+        margin-right: 20px;
+    }
+    .carousel-wrapper {
+        height: 250px;
+    }
+    .room-book-two {
+        margin: 22px 0px 20px 205px;
+        padding: 5px 29px;
+        width: 165px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .room-book-one {
+        padding: 5px 29px;
+        margin: 22px 60px 20px 0px;
+        width: 165px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .main h4 {
+        font-size: 35px;
+    }
+    .main p {
+        font-size: 14px;
+    }
+    .price {
+        font-size: 25px;
+    }
+    .flex-layout-one .content-layout{
+        margin-left: 20px;
+    }
+    .room-header {
+        margin-bottom: 70px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .main h7 {
+        font-size: 13px;
+        margin-bottom: 0px;
+    }
+    .main h2 {
+        font-size: 50px;
+        line-height: 100%;
+        margin: 0px 0px 17px 0px;
+    }
+    .main h4 {
+        font-size: 35px;
+    }
+    .main p {
+        font-size: 12px;
+    }
+    .price {
+        font-size: 25px;
+    }
+    .content-layout {
+        align-items: center !important;
+        text-align: center;
+        max-width: 80% !important;
+    }
+    .carousel-wrapper {
+        margin: 0;
+        height: 250px;
+    }
+    .room-book-two {
+        padding: 5px 29px;
+        margin: 0;
+        width: 180px;
+        font-size: 15px;
+    }
+    .flex-layout-two {
+        flex-direction: column !important;
+        margin-top: 40px;
+        align-items: center;
+        align-content: center;
+        justify-content: center !important;
+        flex-wrap: wrap;
+    }
+    .flex-layout-two .content-layout{
+        margin-left: 0px;
+        padding-bottom: 10px;
+    }
+    .room-book-one {
+        padding: 5px 29px;
+        margin: 0;
+        width: 180px;
+        font-size: 15px;
+    }
+    .flex-layout-one {
+        flex-direction: column !important;
+        margin-top: 40px;
+        align-items: center;
+        align-content: center;
+        justify-content: center !important;
+        flex-wrap: wrap;
+    }
+    .flex-layout-one .content-layout{
+        margin-left: 0px;
+        padding-bottom: 10px;
+    }
+    .room-header {
+        margin-bottom: 70px;
+    }
+
+    #cavanna-section,#cottage2-section,
+    #cottage3-section,#smallvip-section,
+    #vip1-section,#vip2-section,
+    #duke-section,#drake-section,
+    #sapphire-section,#ruby-section,
+    #aquamarine-section,#diamond-section,
+    #banana-section,#mango-section,
+    #santol-section,#guava-section,
+    #bamboo-section,#guyabano-section,
+    #coconut-section,#tamarind-section{
+        border: 1px solid #212121;
+        border-radius: 5px;
+        box-shadow: #4E544D;
+        background-color:#faf9f6;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .carousel-wrapper {
+        height: 220px;
+    }
+    .main h2{
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .carousel-wrapper {
+        height: 195px;
+    }
+    .main h2{
+        font-size: 40px;
+    }
+    .main h4{
+        font-size: 40px;
+    }
+    .main h7{
+        font-size: 12px;
+    }
+}

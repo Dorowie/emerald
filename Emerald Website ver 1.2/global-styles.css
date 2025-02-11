@@ -805,6 +805,7 @@ textarea:focus {
     }
     .menu-button p{
         font-size: 15px;
+        display: none;
     }
     .hamburger-menu div {
         width: 30px;
@@ -813,7 +814,7 @@ textarea:focus {
     }
     .book-button {
         padding: 0px 20px;
-        margin: 0px 30px 0px 0px;
+        margin: 0;
         font-size: 15px
     }
     .tab-button {
@@ -904,6 +905,7 @@ textarea:focus {
     }
     .menu-button p{
         font-size: 15px;
+        display: none;
     }
     .hamburger-menu div {
         width: 30px;
@@ -912,7 +914,7 @@ textarea:focus {
     }
     .book-button {
         padding: 0px 20px;
-        margin: 0px 30px 0px 0px;
+        margin: 0;
         font-size: 15px
     }
     .tab-button {
@@ -1007,10 +1009,11 @@ textarea:focus {
         }
     }
     .menu-button{
-        margin: 10px 0px 0px 20px;
+        margin: 0;
     }
     .menu-button p{
         font-size: 15px;
+        display: none;
     }
     .hamburger-menu div {
         width: 30px;
